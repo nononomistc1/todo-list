@@ -119,8 +119,8 @@ export function renderTodos(todos, searchQuery = '') {
     delBtn.addEventListener('click', () => onDelete(todo.id));
 
     li.appendChild(categorySpan);
-    li.appendChild(textSpan);
     li.appendChild(checkbox);
+    li.appendChild(textSpan);
     li.appendChild(delBtn);
     list.appendChild(li);
   });
