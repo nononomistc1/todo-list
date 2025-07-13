@@ -986,6 +986,28 @@ html, body {
 }
 
 /* Improved custom checkbox checkmark for centering and straightness */
+.todo-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.8em 0 0.8em;
+  border: 2px solid var(--primary-color, #8B5CF6);
+  border-radius: 6px;
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background: var(--primary-color, #8B5CF6);
+  border-color: var(--primary-color, #8B5CF6);
+}
+
 .todo-item input[type="checkbox"]:checked::after {
   content: '';
   display: block;
@@ -999,8 +1021,9 @@ html, body {
   transform: translate(-50%, -60%) rotate(45deg);
   box-sizing: border-box;
 }
+
 .todo-item input[type="checkbox"]:focus {
-  box-shadow: 0 0 0 2px var(--primary-color)33;
+  box-shadow: 0 0 0 2px var(--primary-color, #8B5CF6)33;
 }
 
 #new-todo-due {
