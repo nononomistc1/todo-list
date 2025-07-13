@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/themes.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <div id="app">
+    <div id="header-box">
+      <h1>Taskly</h1>
+      <div id="top-actions">
+        <button id="burger-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="burger-menu-actions">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="32" height="3.5" rx="1.75" fill="currentColor"/>
+            <rect y="14" width="32" height="3.5" rx="1.75" fill="currentColor"/>
+            <rect y="21" width="32" height="3.5" rx="1.75" fill="currentColor"/>
+          </svg>
+        </button>
+        <div id="burger-menu-actions" class="burger-menu-actions" aria-hidden="true" tabindex="-1">
+          <button id="theme-toggle" type="button" aria-label="Toggle dark/light mode">
+            <img src="assets/icons/night-mode.png" alt="Dark mode" width="24" height="24" />
+          </button>
+          <button id="sound-toggle" type="button" aria-label="Toggle sound effects">
+            <img src="assets/icons/volume.png" alt="Sound" width="24" height="24" />
+          </button>
+          <button id="shortcut-help" type="button" aria-label="Show keyboard shortcuts">
+            <img src="assets/icons/external-link.png" alt="Shortcuts" width="24" height="24" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Task Controls -->
+    <div id="task-controls">
+      <!-- Category Selector -->
+      <div id="category-controls">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+          <option value="all">All</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="school">School</option>
+          <option value="shopping">Shopping</option>
+        </select>
+        <button id="manage-categories" type="button" aria-label="Manage categories">
+          <img src="assets/icons/settings.png" alt="Settings" width="24" height="24" />
+        </button>
+      </div>
+      <!-- Add New Task Form -->
+      <form id="new-todo-form">
+        <input id="new-todo-input" type="text" placeholder="Add a new task..." autocomplete="off" required />
+        <input id="new-todo-due" type="datetime-local" aria-label="Due date and time" />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <!-- Filter Controls -->
+    <div id="filter-controls">
+      <div class="filter-row-1">
+        <button id="filter-all" type="button">All</button>
+        <button id="filter-active" type="button">Active</button>
+        <button id="filter-completed" type="button">Completed</button>
+      </div>
+      <div class="filter-row-2">
+        <button id="sort-by-due" type="button">Sort by Due Date</button>
+        <button id="clear-filters" type="button">Clear Filters</button>
+      </div>
+    </div>
+    <!-- Search Input -->
+    <div id="search-controls">
+      <input id="search-input" type="search" placeholder="Search tasks..." aria-label="Search tasks" />
+    </div>
+    <!-- Progress Bar / Stats -->
+    <div id="progress-bar-container" aria-label="Task completion progress">
+      <div id="progress-bar"></div>
+      <span id="progress-stats"></span>
+    </div>
+    <!-- Statistics -->
+    <div id="stats-container"></div>
+    <ul id="todo-list"></ul>
+    <div id="todo-counts"></div>
+  </div>
+  <!-- Category Management Modal -->
+  <div id="category-modal" class="modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+    <div class="modal-content">
+      <h2>Manage Categories</h2>
+      <ul id="category-list"></ul>
+      <form id="add-category-form">
+        <input id="new-category-name" type="text" placeholder="Category name" required />
+        <input id="new-category-color" type="color" value="#888888" />
+        <button type="submit">Add</button>
+      </form>
+      <button id="close-category-modal" type="button" aria-label="Close">Close</button>
+    </div>
+  </div>
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

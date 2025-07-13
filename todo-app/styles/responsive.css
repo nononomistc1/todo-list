@@ -1,0 +1,428 @@
+/* Mobile-first responsive design */
+
+/* Base mobile styles (up to 480px) */
+@media (max-width: 480px) {
+  #app {
+    max-width: 100%;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  /* Header adjustments for mobile */
+  #header-box {
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  #top-actions {
+    gap: 0.8rem;
+  }
+
+  #top-actions button {
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0.8rem;
+  }
+
+  /* Task controls mobile optimization */
+  #task-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #category-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  #category-controls label {
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  #category-select {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  #new-todo-form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #new-todo-input {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  #new-todo-due {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  #new-todo-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  #manage-categories {
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0.8rem;
+  }
+
+  /* Filter controls mobile layout */
+  #filter-controls {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  #filter-controls button {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    min-height: 48px;
+    flex: 1;
+    min-width: 80px;
+  }
+
+  /* Search input mobile optimization */
+  #search-controls input {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  /* Todo items mobile optimization */
+  .todo-item {
+    padding: 1rem;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 72px;
+  }
+
+  .todo-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .delete-btn {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.6rem;
+  }
+
+  .delete-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Category indicator mobile optimization */
+  .category-indicator {
+    width: 2em;
+    height: 2em;
+    font-size: 1em;
+    margin-right: 0.8em;
+  }
+
+  /* Progress bar mobile */
+  #progress-bar-container {
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  #progress-stats {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Stats container mobile */
+  #stats-container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .stats-item {
+    padding: 1rem;
+  }
+
+  /* Modal mobile optimization */
+  .modal-content {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+  }
+
+  /* Category modal mobile */
+  .category-list-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .category-list-item input[type="text"] {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+
+  .category-list-item button {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.6rem;
+  }
+
+  /* Add category form mobile */
+  #add-category-form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #add-category-form input[type="text"] {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+
+  #add-category-form input[type="color"] {
+    width: 100%;
+    height: 48px;
+  }
+
+  #add-category-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+
+  /* Todo counts mobile */
+  #todo-counts {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.8rem;
+    background: var(--secondary-background);
+    border-radius: var(--border-radius);
+    margin-top: 0.8rem;
+  }
+
+  /* Due date mobile optimization */
+  .todo-due-date {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+}
+
+/* Tablet styles (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #app {
+    max-width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  #header-box {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  #task-controls {
+    gap: 1rem;
+  }
+
+  #new-todo-form {
+    gap: 0.8rem;
+  }
+
+  #filter-controls {
+    gap: 0.6rem;
+  }
+
+  #filter-controls button {
+    padding: 0.7rem 1.2rem;
+    min-height: 52px;
+  }
+
+  .todo-item {
+    padding: 1.2rem;
+    min-height: 68px;
+  }
+
+  .delete-btn {
+    min-width: 52px;
+    min-height: 52px;
+  }
+
+  #stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Desktop styles (769px and up) */
+@media (min-width: 769px) {
+  #app {
+    max-width: 700px;
+    padding: 2.5rem 2rem;
+    gap: 1.2rem;
+  }
+
+  #header-box {
+    padding: 2rem 2.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  #task-controls {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #category-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #new-todo-form {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  #filter-controls {
+    gap: 0.5rem;
+  }
+
+  #filter-controls button {
+    padding: 0.5rem 1rem;
+    min-height: 48px;
+  }
+
+  .todo-item {
+    padding: 0.8rem 1rem;
+    min-height: 60px;
+  }
+
+  .delete-btn {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  #stats-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Large desktop styles (1000px and up) */
+@media (min-width: 1000px) {
+  #app {
+    max-width: 900px;
+    padding: 3rem 3rem;
+  }
+
+  #todo-list {
+    font-size: 1.15rem;
+  }
+
+  .todo-item {
+    font-size: 1.15rem;
+  }
+}
+
+/* Touch-friendly improvements for all mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  button, input, select {
+    min-height: 44px;
+  }
+
+  /* Improve button hover states for touch */
+  button:hover {
+    transform: none;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Better focus states for touch */
+  :focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+
+  /* Improve scrolling on mobile */
+  .modal-content {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Better text selection */
+  .todo-text {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  #header-box {
+    padding: 1rem 1.5rem;
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #task-controls {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  #new-todo-form {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  #filter-controls {
+    flex-wrap: wrap;
+  }
+
+  #filter-controls button {
+    flex: 1;
+    min-width: 100px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .category-indicator {
+    box-shadow: 0 0.5px 1px rgba(0,0,0,0.1);
+  }
+
+  .todo-item {
+    box-shadow: 0 0.5px 2px rgba(0,0,0,0.05);
+  }
+}
